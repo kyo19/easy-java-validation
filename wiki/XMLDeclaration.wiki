@@ -16,5 +16,6 @@ Following XML file for sample validation
 == XML Elements ==
 Followings are the XML elements used in validation XML file.
 
-|| *Name* || *Mandatory* || *Has Attributes* || *Parent Element* || *Description* || 
-|| validations || true || No ||  || It is root element of the XML file ||
+|| *Name* || *Mandatory* || *Has Attributes* || *Parent Element* || *Multiple Occurrences* || *Description* || 
+|| validations || Yes|| No ||  || No || It is root element of the XML file ||
+|| properties|| No || Yes || validations || Yes || You can specify property files for internationalization purpose||
