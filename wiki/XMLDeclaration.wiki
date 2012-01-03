@@ -1,0 +1,20 @@
+#labels Phase-Implementation
+==XML Declaration==
+
+ * Introduction 
+ * Sample
+ * XML Elements
+
+== Introduction ==
+
+The XML contains the rules that should be applied for the form fields. The rule contains predefined validation types, field name, message(that should be display to user when validation fails).
+
+
+== Sample ==
+Following XML file for sample validation
+
+== XML Elements ==
+Followings are the XML elements used in validation XML file.
+
+|| *Name* || *Mandatory* || *Has Attributes* || *Parent Element* || *Description* || 
+|| validations || true || No ||  || It is root element of the XML file ||
