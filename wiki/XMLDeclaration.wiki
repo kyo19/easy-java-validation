@@ -4,6 +4,7 @@
  * Introduction 
  * Sample
  * XML Elements
+ * Attributes
 
 == Introduction ==
 
