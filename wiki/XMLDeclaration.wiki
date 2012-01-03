@@ -14,7 +14,7 @@ The XML contains the rules that should be applied for the form fields. The rule 
 Following XML file for sample validation
 
 == XML Elements ==
-Followings are the XML elements used in validation XML file.
+Followings are the XML elements that are required to declare validations  in the XML file.
 
 || *Name* || *Mandatory* || *Has Attributes* || *Parent Element* || *Multiple Occurrences* || *Description* || 
 || validations || Yes|| No ||  || No || It is root element of the XML file ||
