@@ -9,6 +9,7 @@
 
 The XML contains the rules that should be applied for the form fields. The rule contains predefined validation types, field name, message(that should be display to user when validation fails).
 
+If the validations declared in XML file(s), then *easy-validation* framework use the file(s) to apply validations for your application.
 
 == Sample ==
 Following XML file for sample validation
