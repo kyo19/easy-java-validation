@@ -19,4 +19,5 @@ Followings are the XML elements that are required to declare validations  in the
 
 || *Name* || *Mandatory* || *Has Attributes* || *Parent Element* || *Multiple Occurrences* || *Description* || 
 || validations || Yes|| No ||  || No || It is root element of the XML file ||
-|| properties|| No || Yes || validations || Yes || You can specify property files for internationalization purpose||
+|| properties || No || Yes || validations || Yes || You can specify property files (contains key value pair) for internationalization purpose ||
+|| file || No || No || properties || Yes || Path to the property file ||
