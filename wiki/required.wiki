@@ -1,3 +1,4 @@
+#sidebar General
 
 <wiki:toc max_depth="2" />
 
