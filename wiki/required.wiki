@@ -15,7 +15,6 @@ Required validator checks if the specified field is not null.
 		<rule type="required" fieldName="firstName">
 			<message>FirstName is required</message>
 		</rule>
-		
 	</validation>
  </validations>
 }}}
