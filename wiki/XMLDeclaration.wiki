@@ -19,3 +19,8 @@ Following XML file for sample validation
 Validation XML file has following structure.
 
 *validations* :- This is root element of XML, with no attribute.
+
+*properties* :- The element declares properties files (key value pairs) for internationalization. You can specify this element multiple times. It has only one attribute as,
+ 
+  || *Name* || *Required* || *Default Value* || *Description* ||
+  || locale || Yes || EN || Specify locale for internationalization
