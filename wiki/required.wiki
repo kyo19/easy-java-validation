@@ -6,7 +6,7 @@ Required validator checks if the specified field is not null.
 = Parameters =
  * type - type of the validation. Here it's value is `required`.
 
- * fieldName - Name of the field for which validation need to apply
+ * fieldName - Name of the field that need to check for validation. 
  
 = Examples =
 {{{
