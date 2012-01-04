@@ -23,4 +23,4 @@ Validation XML file has following structure.
 *properties* :- The element declares properties files (key value pairs) for internationalization. You can specify this element multiple times. It has only one attribute as,
  
   || *Name* || *Required* || *Default Value* || *Description* ||
-  || locale || Yes || EN || Specify locale for internationalization
+  || locale || Yes || EN || Specify locale for internationalization ||
