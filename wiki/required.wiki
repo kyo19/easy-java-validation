@@ -1,4 +1,4 @@
-#sidebar TableOfContents
+<wiki:toc max_depth="2" />
 
 = Description =
 
