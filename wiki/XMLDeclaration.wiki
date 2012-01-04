@@ -25,4 +25,6 @@ Validation XML file has following structure.
 || *Name* || *Required* || *Default Value* || *Description* ||
 || locale || Yes || EN || Specify locale for internationalization ||
 
+It is child element of `<validations>`
+
 `<file>` :- You can specify property file path within this element. It is child element of `<properties>` element. You can specify multiple file elements.
