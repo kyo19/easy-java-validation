@@ -11,6 +11,7 @@ Required validator checks if the specified field is not null.
 = Examples =
 {{{
  <validations>
+        <!-- Required field validation for 'userFormValidation' -->
 	<validation name="userFormValidation">
 		<rule type="required" fieldName="firstName">
 			<message>FirstName is required</message>
