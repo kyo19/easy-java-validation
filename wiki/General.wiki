@@ -6,3 +6,4 @@
     * [url URL]
     * [int Integer]
     * [double Double]
+    * [date Date]
