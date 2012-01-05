@@ -16,8 +16,6 @@ The regular expression used to validate that the string is an email address is:
  * fieldName - Name of the field that need to check for validation. 
 
  
-To use `min` and `max` parameters, you will have to add `<param>` element in the `<rule>` element.
-
 = Examples =
 {{{
  <validations>
