@@ -16,7 +16,7 @@ Validation to checks length of the string field.
 
  * max - The max length of the field value. Default ignore.
  
-To use `min` and `max` parameters, you will have to add `<param>` element in the '<rule>' element.
+To use `min` and `max` parameters, you will have to add `<param>` element in the `<rule>` element.
 
 = Examples =
 {{{
