@@ -21,7 +21,7 @@ To use `min` and `max` parameters, you will have to add `<param>` element in the
 = Examples =
 {{{
  <validations>
-        <!-- Required field validation for 'userFormValidation' -->
+        <!-- String length validation for 'userFormValidation' -->
 	<validation name="userFormValidation">
 		<rule type="stringlength" fieldName="firstName">
                         <param min="5" max="10"/>
