@@ -12,9 +12,9 @@ Validation to checks if the double value specified is within a certain range.
 
  * fieldName - Name of the field that need to check for validation. 
 
- * min - The min length of the field value. (Ignored if not specified).
+ * min - The min length of the field value. (Optional).
 
- * max - The max length of the field value. (Ignored if not specified).
+ * max - The max length of the field value. (Optional).
  
 To use `min` and `max` parameters, you will have to add `<param>` element in the `<rule>` element.
 
