@@ -7,3 +7,4 @@
     * [int Integer]
     * [double Double]
     * [date Date]
+    * [regularexpression Regular Expression]
