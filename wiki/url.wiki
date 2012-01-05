@@ -19,7 +19,7 @@ The regular expression used to validate that the string is valid URL address is:
 = Examples =
 {{{
  <validations>
-        <!-- email validation for 'userFormValidation' -->
+        <!-- url validation for 'userFormValidation' -->
 	<validation name="userFormValidation">
 		<rule type="url" fieldName="firstName">
 			<message>Invalid URL</message>
