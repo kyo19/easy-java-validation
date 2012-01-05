@@ -4,3 +4,4 @@
     * [stringlength String Length]
     * [email Email]
     * [url URL]
+    * [int Integer]
