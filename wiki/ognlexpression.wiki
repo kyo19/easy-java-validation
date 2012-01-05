@@ -1,0 +1,31 @@
+#summary Validation using OGNL expression
+
+<wiki:toc max_depth="1" />
+
+= Description =
+
+Perform validation check using OGNL expression.
+
+= Parameters =
+ * type - type of the validation. Here it's value is `expression`.
+
+ * fieldName - Name of the field that need to check for validation. It is optional for validation using OGNL expression.
+
+ * expression - The regular expression.
+
+ * regEx - Indicate whether to use regular or OGNL expression. It is optional. It can be either `true` or `false`. `true` for regular expression otherwise it would treat expression as OGNL.
+
+To use `expression` and `regEx` parameters, you will have to add `<param>` element in the `<rule>` element.
+
+= Examples =
+{{{
+ <validations>
+        <!-- Validation for 'userFormValidation' using OGNL expression -->
+	<validation name="userFormValidation">
+		<rule type="expression">
+                        <param expression="age > 21" />
+			<message>Age should be greater than 21</message>
+		</rule>
+	</validation>
+ </validations>
+}}}
