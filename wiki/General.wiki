@@ -2,3 +2,5 @@
   * [Validation]
     * [required Required]
     * [stringlength String Length]
+    * [email Email]
+    * [url URL]
