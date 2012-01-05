@@ -1,4 +1,4 @@
-* [General]
+ * [General]
   * [Validator]
-       * [required Required Validator]
+    * [required Required Validator]
     
