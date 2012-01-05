@@ -1,0 +1,42 @@
+#summary Date range validation
+
+<wiki:toc max_depth="1" />
+
+= Description =
+
+Validation to checks if the date specified is within a certain range.
+
+
+= Parameters =
+ * type - type of the validation. Here it's value is `date`.
+
+ * fieldName - Name of the field that need to check for validation. 
+
+ * dateformat - Any valid java date format to compare specified dates.
+
+ * min - The minimum date range. (Optional).
+
+ * max - The maximum date range. (Optional).
+ 
+You can specify current & yesterday's date for `min` & `max` parameters. The predefined values are as,
+
+  * Current Date :- You can use value as `currentDate`.
+  
+  * Yesterday's Date :- You can use value as `previousDate`.
+
+These values can be case in-sensitive.
+
+To use `min` and `max` parameters, you will have to add `<param>` element in the `<rule>` element.
+
+= Examples =
+{{{
+ <validations>
+        <!-- Date comparison validation for 'userFormValidation' -->
+	<validation name="userFormValidation">
+		<rule type="date" fieldName="birthday">
+                        <param min="25/12/1990" max="20/12/2000" dateformat="dd/MM/yyyy"/>
+			<message>Birthday should be between 25/12/1990 and 20/12/2000</message>
+		</rule>
+	</validation>
+ </validations>
+}}}
