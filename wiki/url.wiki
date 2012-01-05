@@ -1,0 +1,29 @@
+#summary Validation to check valid url.
+
+<wiki:toc max_depth="1" />
+
+= Description =
+
+URL validator checks that a given field is a String and a valid URL.
+
+The regular expression used to validate that the string is valid URL address is: 
+
+`^((http|https|ftp)\\://)?[a-zA-Z0-9\\-\\.]+\\.[a-zA-Z]{2,3}(/\\S*)?$`
+
+= Parameters =
+ * type - type of the validation. Here it's value is `url`.
+
+ * fieldName - Name of the field that need to check for validation. 
+
+ 
+= Examples =
+{{{
+ <validations>
+        <!-- email validation for 'userFormValidation' -->
+	<validation name="userFormValidation">
+		<rule type="url" fieldName="firstName">
+			<message>Invalid URL</message>
+		</rule>
+	</validation>
+ </validations>
+}}}
