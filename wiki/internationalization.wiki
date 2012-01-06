@@ -14,3 +14,14 @@ You can display error messages using internationalization. Easy validation suppo
 `locale` attribute is available on `<properties>` XML element.
 
 = Examples =
+
+{{{
+<validations>
+	<properties locale="EN">
+		<file>resources/error_messages_en.properties</file>
+	</properties>
+	<properties locale="FR">
+		<file>resources/error_messages_fr.properties</file>
+	</properties>
+</validations>	
+}}}
