@@ -1,6 +1,6 @@
 #labels Phase-Implementation
  * [General]
-  * [Validation Types]
+  * [Validation]
     * [required Required]
     * [stringlength String Length]
     * [email Email]
