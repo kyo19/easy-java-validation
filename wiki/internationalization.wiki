@@ -13,6 +13,8 @@ You can display error messages using internationalization. Easy validation suppo
 
 `locale` attribute is available on `<properties>` XML element.
 
+To view list of supporting locales, click [http://code.google.com/p/easy-java-validation/wiki/localecodes here]
+
 = Examples =
 
 {{{
