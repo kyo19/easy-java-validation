@@ -1,0 +1,16 @@
+#summary Display error messages using internationalization(I18N).
+
+<wiki:toc max_depth="1" />
+
+= Introduction =
+
+You can display error messages using internationalization. Easy validation supports some predefined locales. 
+
+
+= Parameters =
+
+ * locale - Specify locale for internationalization.
+
+`locale` attribute is available on `<properties>` XML element.
+
+= Examples =
