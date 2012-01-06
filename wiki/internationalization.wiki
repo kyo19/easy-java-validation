@@ -26,5 +26,19 @@ You can display error messages using internationalization. Easy validation suppo
 	<properties locale="FR">
 		<file>resources/error_messages_fr.properties</file>
 	</properties>
+
+        <validation name="userFormValidation">
+		<rule type="required" fieldName="firstName">
+			<message key="firstName.required"></message>
+		</rule>
+        </validation>
 </validations>	
 }}}
+
+The `error_messages_en.properties` is as,
+
+{{{
+firstName.required=FirstName is required
+}}}
+
+If `key` specified, then `easy-validation` framework load error messages from the properties file of mentioned locale.
