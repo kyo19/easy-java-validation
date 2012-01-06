@@ -29,7 +29,7 @@ You can display error messages using internationalization. Easy validation suppo
 
         <validation name="userFormValidation">
 		<rule type="required" fieldName="firstName">
-			<message key="firstName.required"></message>
+			<message key="firstName.required"></message><!-- Display error message from properties file -->
 		</rule>
         </validation>
 </validations>	
