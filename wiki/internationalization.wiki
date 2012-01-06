@@ -17,9 +17,11 @@ You can display error messages using internationalization. Easy validation suppo
 
 {{{
 <validations>
+        <!-- File contains error messages for 'English' -->
 	<properties locale="EN">
 		<file>resources/error_messages_en.properties</file>
 	</properties>
+        <!-- File contains error messages for 'French' -->
 	<properties locale="FR">
 		<file>resources/error_messages_fr.properties</file>
 	</properties>
