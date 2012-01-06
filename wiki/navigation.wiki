@@ -16,3 +16,4 @@
   * [Miscellaneous]
     * [internationalization Internationalization]
     * [attributePlaceHolder Attribute Place Holder]
+    * [localecodes Locale Code List]
