@@ -1,4 +1,4 @@
-#summary Locale list
+#summary Supported locale list
 #labels Phase-Implementation
 
 Following is the list of locale code which are supported by `easy-validation`.
