@@ -41,4 +41,4 @@ The `error_messages_en.properties` is as,
 firstName.required=FirstName is required
 }}}
 
-If `key` specified, then `easy-validation` framework load error messages from the properties file of mentioned locale.
+If `key` attribute specified for `<message>` element, then `easy-validation` framework load error messages from the properties file of mentioned locale.
