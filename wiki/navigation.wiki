@@ -1,0 +1,19 @@
+#summary Navigation
+#labels Phase-Implementation
+
+ * [General]
+  * [Validation]
+    * [required Required]
+    * [stringlength String Length]
+    * [email Email]
+    * [url URL]
+    * [int Integer]
+    * [double Double]
+    * [date Date]
+    * [Expression]
+      * [regularexpression Regular Expression]
+      * [ognlexpression OGNL Expression]
+
+  * [Miscellaneous]
+    * [internationalization Internationalization]
+    * [attributePlaceHolder Attribute Place Holder]
