@@ -10,3 +10,4 @@
     * [regularexpression Regular Expression]
     * [ognlexpression OGNL Expression]
   * [Miscellaneous]
+    * [internationalization Internationalization]
