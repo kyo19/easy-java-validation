@@ -13,7 +13,6 @@
     * [Expression]
       * [regularexpression Regular Expression]
       * [ognlexpression OGNL Expression]
-
   * [Miscellaneous]
     * [internationalization Internationalization]
     * [attributePlaceHolder Attribute Place Holder]
