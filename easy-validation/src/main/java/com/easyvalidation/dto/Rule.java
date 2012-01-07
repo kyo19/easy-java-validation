@@ -24,11 +24,14 @@ import java.util.Map;
 
 import org.apache.commons.configuration.PropertiesConfiguration;
 
+import com.easyvalidation.common.ErrorMessages;
+import com.easyvalidation.exception.ValidationException;
 import com.easyvalidation.rules.IRule;
 import com.easyvalidation.rules.RULETYPE;
 import com.easyvalidation.rules.RangeRule;
 import com.easyvalidation.rules.builder.RuleBuilder;
 import com.easyvalidation.rules.impl.DateRangeRule;
+import com.easyvalidation.rules.impl.ExpressionRule;
 import com.easyvalidation.util.AttributePlaceHolder;
 import com.easyvalidation.util.Utils;
 
@@ -55,6 +58,8 @@ public final class Rule {
 	private boolean useAttributePlaceHolder = false;
 
 	private String message = null;
+
+	private String expression = null;
 
 	private Map<String, PropertiesConfiguration> propertiesMap = null;
 
@@ -143,29 +148,41 @@ public final class Rule {
 		this.message = message;
 	}
 
-	public void populateRule() {
-		if (rule instanceof RangeRule) {
-			((RangeRule) rule).setMin(min);
-			((RangeRule) rule).setMax(max);
-
-			if (rule instanceof DateRangeRule) {
-				((DateRangeRule) rule).setDateFormat(dateFormat);
-			}
-		}
-
-		rule.setMessage(message);
+	public String getExpression() {
+		return expression;
 	}
 
-	public void transformMessage(String locale) {
+	public void setExpression(String expression) {
+		this.expression = expression;
+	}
+
+	public void populateRule() {
+		if (rule instanceof RangeRule) {
+			((RangeRule) rule).setMin(getMin());
+			((RangeRule) rule).setMax(getMax());
+
+			if (rule instanceof DateRangeRule) {
+				((DateRangeRule) rule).setDateFormat(getDateFormat());
+			}
+		} else if (rule instanceof ExpressionRule) {
+			((ExpressionRule) rule).setExpression(getExpression());
+		}
+
+		rule.setMessage(getMessage());
+	}
+
+	public void transformMessage(String locale) throws ValidationException {
 		if (!Utils.isEmpty(propertiesMap) && !Utils.isEmpty(key)) {
 			PropertiesConfiguration propertiesConfiguration = propertiesMap
 					.get(locale);
 			if (propertiesConfiguration != null) {
 				message = propertiesConfiguration.getString(key);
+			} else {
+				throw new ValidationException(ErrorMessages.LOCALE_NOT_MAPPED);
 			}
 		}
 
-		if (!Utils.isEmpty(message) && useAttributePlaceHolder) {
+		if (!Utils.isEmpty(message) && isUseAttributePlaceHolder()) {
 			Map<String, Object> params = generateAttributeParamMap();
 			message = AttributePlaceHolder.generateMesageFromPlaceHolder(
 					message, params);

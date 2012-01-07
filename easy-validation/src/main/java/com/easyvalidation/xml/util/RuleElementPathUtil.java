@@ -107,4 +107,10 @@ public class RuleElementPathUtil {
 				+ Constants.DOT + Nodes.PARAM + Constants.ATTRIBUTE_START
 				+ Attributes.REGEX + Constants.ATTRIBUTE_END;
 	}
+	
+	public static String getRuleExpression(int index) {
+		return Nodes.RULE + Constants.PARAN_START + index + Constants.PARAN_END
+				+ Constants.DOT + Nodes.PARAM + Constants.ATTRIBUTE_START
+				+ Attributes.EXPRESSION + Constants.ATTRIBUTE_END;
+	}
 }
