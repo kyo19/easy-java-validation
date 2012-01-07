@@ -23,7 +23,7 @@ To use `expression` and `regEx` parameters, you will have to add `<param>` eleme
         <!-- Validation for 'userFormValidation' using OGNL expression -->
 	<validation name="userFormValidation">
 		<rule type="expression">
-                        <param expression="age > 21" />
+                        <param expression="#age > 21" />
 			<message>Age should be greater than 21</message>
 		</rule>
 	</validation>
