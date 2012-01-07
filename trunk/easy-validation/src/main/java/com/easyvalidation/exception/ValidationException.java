@@ -31,6 +31,14 @@ public class ValidationException extends RuntimeException {
 		super(ex);
 	}
 
+	public ValidationException(String message) {
+		super(message);
+	}
+
+	public ValidationException(String message, Throwable ex) {
+		super(message, ex);
+	}
+
 	/**
 	 * Method to map exception to ValidationException & throw the exception to
 	 * caller

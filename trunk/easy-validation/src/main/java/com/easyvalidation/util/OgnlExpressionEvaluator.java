@@ -22,8 +22,8 @@ import java.util.Map;
 
 import ognl.Ognl;
 import ognl.OgnlContext;
-import ognl.OgnlException;
 
+import com.easyvalidation.common.ErrorMessages;
 import com.easyvalidation.exception.ValidationException;
 
 /**
@@ -51,8 +51,8 @@ public final class OgnlExpressionEvaluator {
 			Object expr = Ognl.parseExpression(expression);
 			value = Boolean.valueOf(Ognl.getValue(expr, context, (Object) null)
 					.toString());
-		} catch (OgnlException ex) {
-			ValidationException.mapAndThrow(ex);
+		} catch (Exception ex) {
+			throw new ValidationException(ErrorMessages.OGNL_PARSING_ERROR, ex);
 		}
 		return value;
 	}

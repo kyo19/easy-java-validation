@@ -22,6 +22,9 @@ import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import com.easyvalidation.common.ErrorMessages;
+import com.easyvalidation.exception.ValidationException;
+
 /**
  * Class to replace the attributes placeholder values mentioned in message of
  * the rule
@@ -43,16 +46,22 @@ public final class AttributePlaceHolder {
 	 * @return
 	 */
 	public static String generateMesageFromPlaceHolder(String message,
-			Map<String, Object> params) {
+			Map<String, Object> params) throws ValidationException {
 		Pattern pattern = Pattern.compile(PLACEHOLDER_REGEX);
 		Matcher matcher = pattern.matcher(message);
 		StringBuffer sbMessage = new StringBuffer();
-		while (matcher.find()) {
-			String key = matcher.group();
-			String keyVal = key.substring(2, key.length() - 1);
-			matcher.appendReplacement(sbMessage, params.get(keyVal).toString());
+		try {
+			while (matcher.find()) {
+				String key = matcher.group();
+				String keyVal = key.substring(2, key.length() - 1);
+				matcher.appendReplacement(sbMessage, params.get(keyVal)
+						.toString());
+			}
+			matcher.appendTail(sbMessage);
+		} catch (Exception ex) {
+			throw new ValidationException(
+					ErrorMessages.ATTRIBUTE_NOT_SPECIFIED, ex);
 		}
-		matcher.appendTail(sbMessage);
 		return sbMessage.toString();
 	}
 }

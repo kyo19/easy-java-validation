@@ -133,6 +133,9 @@ public class XMLProcessor {
 
 					String regEx = subConfig.getString(RuleElementPathUtil
 							.getRuleRegEx(ruleIndex));
+					
+					String expression = subConfig.getString(RuleElementPathUtil
+							.getRuleExpression(ruleIndex));
 
 					Rule rule = new Rule(ruleType);
 
@@ -145,7 +148,7 @@ public class XMLProcessor {
 					rule.setUseAttributePlaceHolder(Boolean
 							.valueOf(useAttributePlaceHolder));
 					rule.setRegEx(Boolean.valueOf(regEx));
-
+					rule.setExpression(expression);
 					if (isMessageFromKeyAllowed) {
 						rule.setPropertiesMap(propertiesMap);
 					}
