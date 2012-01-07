@@ -166,6 +166,7 @@ public final class Rule {
 			}
 		} else if (rule instanceof ExpressionRule) {
 			((ExpressionRule) rule).setExpression(getExpression());
+			((ExpressionRule) rule).setRegEx(isRegEx());
 		}
 
 		rule.setMessage(getMessage());

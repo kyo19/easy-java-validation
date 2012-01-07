@@ -43,7 +43,7 @@
   expression CDATA #IMPLIED
   max NMTOKEN #IMPLIED
   min NMTOKEN #IMPLIED
-  regEx (true|false) "false">
+  regex (true|false) "false">
 
 <!ELEMENT message (#PCDATA)>
 <!ATTLIST message
