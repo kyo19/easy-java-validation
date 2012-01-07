@@ -42,7 +42,7 @@ public interface Attributes {
 
 	String PATH = "path";
 
-	String REGEX = "regEx";
+	String REGEX = "regex";
 
 	String USE_ATTRIBUTE_PLACEHOLDER = "useAttributePlaceHolder";
 
