@@ -31,4 +31,4 @@ To use `expression` and `regex` parameters, you will have to add `<param>` eleme
  </validations>
 }}}
 
-The variables, you are using in OGNL expression should be added in parameter map with their values.
+The variables, you are using in OGNL expression should be added in parameter map with their values. e.g:- here `age`.
