@@ -37,7 +37,7 @@ public final class Utils {
 		boolean isEmpty = false;
 		if (obj == null) {
 			isEmpty = true;
-		} else if (obj instanceof String && obj.toString().length() == 0) {
+		} else if (obj instanceof String && (obj.toString().trim()).length() == 0) {
 			isEmpty = true;
 		} else if (obj instanceof Collection && ((Collection) obj).size() == 0) {
 			isEmpty = true;
