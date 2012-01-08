@@ -14,7 +14,7 @@ Perform validation check using custom regular expression.
 
  * expression - The regular expression.
 
- * regex - Indicate whether to use regular or OGNL expression. It is optional. It can be either `true` or `false`. But must be `true` for regular expression otherwise it would treat expression as OGNL.
+ * regex - Indicate whether to use regular or OGNL expression. It is optional. It can be either `true` or `false`. But must be `true` for regular expression otherwise expression would be treated as OGNL.
 
 To use `expression` and `regex` parameters, you will have to add `<param>` element in the `<rule>` element.
 
