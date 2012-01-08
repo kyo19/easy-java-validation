@@ -39,7 +39,7 @@
 
 <!ELEMENT param EMPTY>
 <!ATTLIST param
-  dateformat NMTOKEN #IMPLIED
+  dateformat CDATA #IMPLIED
   expression CDATA #IMPLIED
   max NMTOKEN #IMPLIED
   min NMTOKEN #IMPLIED

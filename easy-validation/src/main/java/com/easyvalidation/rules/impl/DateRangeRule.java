@@ -52,7 +52,7 @@ public class DateRangeRule extends AbstractRule implements RangeRule {
 		if (!Utils.isEmpty(value)) {
 			try {
 				String sValue = value.toString();
-
+				
 				boolean isMinInRange = true;
 				boolean isMaxInRange = true;
 				DateFormat df = new SimpleDateFormat(dateFormat);
@@ -72,7 +72,7 @@ public class DateRangeRule extends AbstractRule implements RangeRule {
 					if (dtMax == null) {
 						dtMax = df.parse(max.toString());
 					}
-					if (dtMax.after(dtValue)) {
+					if (dtValue.after(dtMax)) {
 						isMaxInRange = false;
 					}
 				}
