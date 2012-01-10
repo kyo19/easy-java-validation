@@ -31,7 +31,7 @@
 	</licenses>
 	<scm>
 		<url>http://easy-java-validation.googlecode.com/svn/trunk/</url>
-		<connection>http://easy-java-validation.googlecode.com/svn/trunk/</connection>
+		<connection>scm:svn:http://easy-java-validation.googlecode.com/svn/trunk/</connection>
 	</scm>
 	<developers>
 		<developer>
