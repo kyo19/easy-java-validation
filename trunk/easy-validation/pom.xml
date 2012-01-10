@@ -15,13 +15,13 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>easy-validation</groupId>
+	<groupId>com.easyvalidation</groupId>
 	<artifactId>easy-validation</artifactId>
 	<version>1.0</version>
 	<name>easy-validation</name>
 
 	<description>Java Validation framework</description>
-	<url>http://code.google.com/p/easy-validation</url>
+	<url>http://code.google.com/p/easy-java-validation/</url>
 	<licenses>
 		<license>
 			<name>The Apache Software License, Version 2.0</name>
@@ -30,8 +30,8 @@
 		</license>
 	</licenses>
 	<scm>
-		<url>http://easy-validation.googlecode.com/svn/trunk/</url>
-		<connection>http://easy-validation.googlecode.com/svn/trunk/</connection>
+		<url>http://easy-java-validation.googlecode.com/svn/trunk/</url>
+		<connection>http://easy-java-validation.googlecode.com/svn/trunk/</connection>
 	</scm>
 	<developers>
 		<developer>
@@ -51,7 +51,7 @@
 				</configuration>
 			</plugin>
 
-			<plugin>
+			<!-- <plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-gpg-plugin</artifactId>
 				<executions>
@@ -63,7 +63,7 @@
 						</goals>
 					</execution>
 				</executions>
-			</plugin>
+			</plugin> -->
 		</plugins>
 	</build>
 
