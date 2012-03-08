@@ -16,7 +16,7 @@ Perform validation if given ISBN number is valid.
  <validations>
         <!-- Regular expression validation for 'userFormValidation' -->
 	<validation name="userFormValidation">
-<rule type="isbn" fieldName="isbn">
+                <rule type="isbn" fieldName="isbn">
 			<message>ISBN is not in proper format</message>
 		</rule>
 	</validation>
