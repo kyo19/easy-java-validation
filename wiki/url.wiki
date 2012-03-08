@@ -6,10 +6,6 @@
 
 URL validator checks that a given field is a String and a valid URL.
 
-The regular expression used to validate that the string is valid URL address is: 
-
-`^((http|https|ftp)\\://)?[a-zA-Z0-9\\-\\.]+\\.[a-zA-Z]{2,3}(/\\S*)?$`
-
 = Parameters =
  * type - type of the validation. Here it's value is `url`.
 
