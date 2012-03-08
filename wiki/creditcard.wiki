@@ -16,9 +16,9 @@ Perform validation if given credit card number is valid.
  <validations>
         <!-- Regular expression validation for 'userFormValidation' -->
 	<validation name="userFormValidation">
-<rule type="creditcard" fieldName="creditcardNo">
-			<message>Credit Card number is not in proper format</message>
-		</rule>
+            <rule type="creditcard" fieldName="creditcardNo">
+	       <message>Credit Card number is not in proper format</message>
+	    </rule>
 	</validation>
  </validations>
 }}}
