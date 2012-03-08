@@ -17,8 +17,8 @@ Email validator checks that a given String field, if not empty, is a valid email
  <validations>
         <!-- email validation for 'userFormValidation' -->
 	<validation name="userFormValidation">
-		<rule type="email" fieldName="firstName">
-			<message>Invalid email address</message>
+		<rule type="email" fieldName="email">
+			<message>Email is not in proper format</message>
 		</rule>
 	</validation>
  </validations>
