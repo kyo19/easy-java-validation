@@ -1,0 +1,24 @@
+Validation to check valid credit card number.
+
+<wiki:toc max_depth="1" />
+
+= Description =
+
+Perform validation if given credit card number is valid.
+
+= Parameters =
+ * type - type of the validation. Here it's value is `creditcard`.
+
+ * fieldName - Name of the field that need to check for validation. 
+
+= Examples =
+{{{
+ <validations>
+        <!-- Regular expression validation for 'userFormValidation' -->
+	<validation name="userFormValidation">
+<rule type="creditcard" fieldName="creditcardNo">
+			<message>Credit Card number is not in proper format</message>
+		</rule>
+	</validation>
+ </validations>
+}}}
