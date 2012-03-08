@@ -17,8 +17,8 @@ URL validator checks that a given field is a String and a valid URL.
  <validations>
         <!-- url validation for 'userFormValidation' -->
 	<validation name="userFormValidation">
-		<rule type="url" fieldName="firstName">
-			<message>Invalid URL</message>
+		<rule type="url" fieldName="url">
+			<message>URL is not in proper format</message>
 		</rule>
 	</validation>
  </validations>
