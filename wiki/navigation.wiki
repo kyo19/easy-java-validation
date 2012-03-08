@@ -7,7 +7,7 @@
     * [stringlength String Length]
     * [creditcard Credit Card]
     * [isbn ISBN]
-    * [inetaddress INET Address]
+    * [inetaddress Inet Address]
     * [email Email]
     * [url URL]
     * [int Integer]
