@@ -19,22 +19,24 @@
 
 package com.easyvalidation.rules.impl;
 
-import org.apache.commons.validator.routines.EmailValidator;
+import org.apache.commons.validator.routines.InetAddressValidator;
 
 import com.easyvalidation.rules.AbstractRule;
 import com.easyvalidation.util.Utils;
 
 /**
- * The class checks the entered email address is in correct format.
+ * Rule to check internet address
  */
-public final class EmailRule extends AbstractRule {
+public final class InetAddressRule extends AbstractRule {
 
-	private static EmailValidator emailValidator = EmailValidator.getInstance();
+	private static InetAddressValidator inetAddressValidator = new InetAddressValidator();
 
-	public final boolean checkError() {
+	@Override
+	public boolean checkError() {
 		if (!Utils.isEmpty(getValue())) {
-			return !emailValidator.isValid(getValue().toString());
+			return !inetAddressValidator.isValid(getValue().toString());
 		}
 		return false;
 	}
+
 }

@@ -19,22 +19,25 @@
 
 package com.easyvalidation.rules.impl;
 
-import org.apache.commons.validator.routines.EmailValidator;
+import org.apache.commons.validator.routines.PercentValidator;
 
 import com.easyvalidation.rules.AbstractRule;
 import com.easyvalidation.util.Utils;
 
 /**
- * The class checks the entered email address is in correct format.
+ * Rule to check percent value
  */
-public final class EmailRule extends AbstractRule {
 
-	private static EmailValidator emailValidator = EmailValidator.getInstance();
+public final class PercentRule extends AbstractRule {
 
+	private static PercentValidator percentValidator = new PercentValidator();
+
+	@Override
 	public final boolean checkError() {
 		if (!Utils.isEmpty(getValue())) {
-			return !emailValidator.isValid(getValue().toString());
+			return !percentValidator.isValid(getValue().toString());
 		}
 		return false;
 	}
+
 }

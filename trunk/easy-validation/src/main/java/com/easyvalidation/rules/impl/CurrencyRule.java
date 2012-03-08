@@ -19,22 +19,25 @@
 
 package com.easyvalidation.rules.impl;
 
-import org.apache.commons.validator.routines.EmailValidator;
+import org.apache.commons.validator.routines.CurrencyValidator;
 
 import com.easyvalidation.rules.AbstractRule;
 import com.easyvalidation.util.Utils;
 
 /**
- * The class checks the entered email address is in correct format.
+ * Rule to check currency
  */
-public final class EmailRule extends AbstractRule {
+public final class CurrencyRule extends AbstractRule {
 
-	private static EmailValidator emailValidator = EmailValidator.getInstance();
+	private static CurrencyValidator currencyValidator = new CurrencyValidator();
 
-	public final boolean checkError() {
+	@Override
+	public boolean checkError() {
 		if (!Utils.isEmpty(getValue())) {
-			return !emailValidator.isValid(getValue().toString());
+			return !currencyValidator.isValid(getValue().toString());
 		}
 		return false;
+
 	}
+
 }

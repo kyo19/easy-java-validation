@@ -17,7 +17,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.easyvalidation</groupId>
 	<artifactId>easy-validation</artifactId>
-	<version>1.0</version>
+	<version>2.0</version>
 	<name>easy-validation</name>
 
 	<description>Java Validation framework</description>
@@ -85,5 +85,12 @@
 			<artifactId>xerces</artifactId>
 			<version>2.4.0</version>
 		</dependency>
+		
+		<dependency>
+			<groupId>commons-validator</groupId>
+			<artifactId>commons-validator</artifactId>
+			<version>1.4.0</version>
+		</dependency>
+            
 	</dependencies>
 </project>
