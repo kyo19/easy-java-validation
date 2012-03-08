@@ -24,7 +24,7 @@ package com.easyvalidation.rules;
  */
 public enum RULETYPE {
 
-	REQUIRED, INT, DOUBLE, EMAIL, EXPRESSION, DATE, STRINGLENGTH, URL;
+	REQUIRED, INT, DOUBLE, EMAIL, EXPRESSION, DATE, STRINGLENGTH, URL, CREDITCARD, ISBN, CURRENCY, PERCENT, INETADDRESS;
 
 	/**
 	 * Method to return ruletype as per the value passed to it.

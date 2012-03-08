@@ -19,23 +19,22 @@
 
 package com.easyvalidation.rules.impl;
 
+import org.apache.commons.validator.routines.UrlValidator;
+
+import com.easyvalidation.rules.AbstractRule;
+import com.easyvalidation.util.Utils;
+
 /**
- * Rule to checks URL format. It checks the URL format with regular expression
- * as ^((http|https|ftp)\\://)?[a-zA-Z0-9\\-\\.]+\\.[a-zA-Z]{2,3}(/\\S*)?$
- * 
+ * Rule to checks URL format.
  */
-public class URLRule extends ExpressionRule {
+public final class URLRule extends AbstractRule {
 
-	private static final String URL_REG_EX = "^((http|https|ftp)\\://)?[a-zA-Z0-9\\-\\.]+\\.[a-zA-Z]{2,3}(/\\S*)?$";
+	private static UrlValidator urlValidator = new UrlValidator();
 
-	@Override
-	public final String getExpression() {
-		return URL_REG_EX;
+	public final boolean checkError() {
+		if (!Utils.isEmpty(getValue())) {
+			return !urlValidator.isValid(getValue().toString());
+		}
+		return false;
 	}
-
-	@Override
-	public final boolean isRegEx() {
-		return true;
-	}
-
 }

@@ -19,22 +19,24 @@
 
 package com.easyvalidation.rules.impl;
 
-import org.apache.commons.validator.routines.EmailValidator;
+import org.apache.commons.validator.routines.CreditCardValidator;
 
 import com.easyvalidation.rules.AbstractRule;
 import com.easyvalidation.util.Utils;
 
 /**
- * The class checks the entered email address is in correct format.
+ * Rule to checks valid credit card number.
  */
-public final class EmailRule extends AbstractRule {
 
-	private static EmailValidator emailValidator = EmailValidator.getInstance();
+public final class CreditCardRule extends AbstractRule {
+
+	private static CreditCardValidator creditCardValidator = new CreditCardValidator();
 
 	public final boolean checkError() {
 		if (!Utils.isEmpty(getValue())) {
-			return !emailValidator.isValid(getValue().toString());
+			return !creditCardValidator.isValid(getValue().toString());
 		}
 		return false;
 	}
+
 }

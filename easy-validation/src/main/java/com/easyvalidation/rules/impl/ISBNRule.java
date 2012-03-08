@@ -19,22 +19,24 @@
 
 package com.easyvalidation.rules.impl;
 
-import org.apache.commons.validator.routines.EmailValidator;
+import org.apache.commons.validator.routines.ISBNValidator;
 
 import com.easyvalidation.rules.AbstractRule;
 import com.easyvalidation.util.Utils;
 
 /**
- * The class checks the entered email address is in correct format.
+ * Rule to validates the code is either a valid ISBN-10 or a valid ISBN-13 code
  */
-public final class EmailRule extends AbstractRule {
+public final class ISBNRule extends AbstractRule {
 
-	private static EmailValidator emailValidator = EmailValidator.getInstance();
+	private static ISBNValidator isbnValidator = new ISBNValidator();
 
+	@Override
 	public final boolean checkError() {
 		if (!Utils.isEmpty(getValue())) {
-			return !emailValidator.isValid(getValue().toString());
+			return !isbnValidator.isValid(getValue().toString());
 		}
 		return false;
 	}
+
 }

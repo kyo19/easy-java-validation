@@ -21,11 +21,16 @@ package com.easyvalidation.rules.builder;
 
 import com.easyvalidation.rules.IRule;
 import com.easyvalidation.rules.RULETYPE;
+import com.easyvalidation.rules.impl.CreditCardRule;
+import com.easyvalidation.rules.impl.CurrencyRule;
 import com.easyvalidation.rules.impl.DateRangeRule;
 import com.easyvalidation.rules.impl.DoubleRangeRule;
 import com.easyvalidation.rules.impl.EmailRule;
 import com.easyvalidation.rules.impl.ExpressionRule;
+import com.easyvalidation.rules.impl.ISBNRule;
+import com.easyvalidation.rules.impl.InetAddressRule;
 import com.easyvalidation.rules.impl.IntRangeRule;
+import com.easyvalidation.rules.impl.PercentRule;
 import com.easyvalidation.rules.impl.RequiredRule;
 import com.easyvalidation.rules.impl.StringLengthRule;
 import com.easyvalidation.rules.impl.URLRule;
@@ -78,6 +83,26 @@ public final class RuleBuilder {
 		}
 		case URL: {
 			rule = new URLRule();
+			break;
+		}
+		case CREDITCARD: {
+			rule = new CreditCardRule();
+			break;
+		}
+		case ISBN: {
+			rule = new ISBNRule();
+			break;
+		}
+		case CURRENCY: {
+			rule = new CurrencyRule();
+			break;
+		}
+		case PERCENT: {
+			rule = new PercentRule();
+			break;
+		}
+		case INETADDRESS: {
+			rule = new InetAddressRule();
 			break;
 		}
 		}

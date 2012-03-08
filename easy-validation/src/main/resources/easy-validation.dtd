@@ -35,7 +35,7 @@
 <!ELEMENT rule (param?,message)>
 <!ATTLIST rule 
   fieldName NMTOKEN #IMPLIED
-  type (required|int|double|email|expression|date|stringlength|url) #REQUIRED>
+  type (required|int|double|email|expression|date|stringlength|url|creditcard|isbn|inetaddress) #REQUIRED>
 
 <!ELEMENT param EMPTY>
 <!ATTLIST param

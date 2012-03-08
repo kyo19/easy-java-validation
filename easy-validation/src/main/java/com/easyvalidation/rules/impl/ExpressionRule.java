@@ -20,8 +20,8 @@
 package com.easyvalidation.rules.impl;
 
 import java.util.Map;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+
+import org.apache.commons.validator.routines.RegexValidator;
 
 import com.easyvalidation.rules.AbstractRule;
 import com.easyvalidation.util.OgnlExpressionEvaluator;
@@ -35,6 +35,8 @@ import com.easyvalidation.util.Utils;
  */
 public class ExpressionRule extends AbstractRule {
 
+	private RegexValidator regexValidator = null;
+
 	private String expression = null;
 
 	private boolean regEx = false;
@@ -43,14 +45,13 @@ public class ExpressionRule extends AbstractRule {
 
 	@Override
 	/**
-	 * Checks for error. As per parameter regEx, if true then regalar expression otherwise OGNL.
+	 * Checks for error. As per parameter regEx, if true then regular expression otherwise OGNL.
 	 */
 	public final boolean checkError() {
 		if (isRegEx()) {
 			if (!Utils.isEmpty(getValue())) {
-				Pattern pattern = Pattern.compile(getExpression());
-				Matcher matcher = pattern.matcher(getValue().toString());
-				return !matcher.matches();
+				regexValidator = new RegexValidator(getExpression());
+				return !regexValidator.isValid(getValue().toString());
 			}
 		} else {
 			return !OgnlExpressionEvaluator.getValue(expression, parameters);
