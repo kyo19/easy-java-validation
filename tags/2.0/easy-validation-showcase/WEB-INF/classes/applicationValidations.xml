@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE validations SYSTEM "easy-validation.dtd">
+
+<validations>
+
+	<properties locale="EN">
+		<file>error_message_en.properties</file>
+	</properties>
+	
+	<validation name="userFormValidation">
+		<rule type="required" fieldName="name">
+			<message key="name.required"/>
+		</rule>
+		
+		<rule type="stringlength" fieldName="name">
+			<param min="5" max="10"/>
+			<message useAttributePlaceHolder="true">${fieldName} should be between ${min} and ${max}</message>
+		</rule>
+		
+		<rule type="email" fieldName="email">
+			<message>Email is not in proper format</message>
+		</rule>
+		
+		<rule type="expression" fieldName="zipcode">
+			<param expression="^\d{5}([\-]\d{4})?$" regex="true"/>
+			<message>Zipcode should be of length 4 or 5</message>
+		</rule>
+		
+		<rule type="expression">
+			<param expression="#age > 21"/>
+			<message>Age should be above 21</message>
+		</rule>
+		
+		<rule type="url" fieldName="url">
+			<message>URL is not in proper format</message>
+		</rule>
+		
+		<rule type="date" fieldName="dob">
+			<param max="currentDate" dateformat="dd/MM/yyyy"/>
+			<message>Date of birth should not be greater than today</message>
+		</rule>
+		
+		<rule type="creditcard" fieldName="creditcardNo">
+			<message>Credit Card number is not in proper format</message>
+		</rule>
+		
+		<rule type="isbn" fieldName="isbn">
+			<message>ISBN is not in proper format</message>
+		</rule>
+		
+		<rule type="inetaddress" fieldName="inetaddress">
+			<message>IP Address is not in proper format</message>
+		</rule>
+	</validation>
+</validations>
