@@ -8,7 +8,7 @@
     * [url URL]
     * [creditcard Credit Card]
     * [isbn ISBN]
-    * [inetaddress Inet Address]
+    * [inetaddress IP Address]
     * [int Integer]
     * [double Double]
     * [date Date]
