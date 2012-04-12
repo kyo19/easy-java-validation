@@ -1,4 +1,4 @@
-#summary Validation to check valid internet address.
+#summary Validation to check valid internet(IP) address.
 
 <wiki:toc max_depth="1" />
 
