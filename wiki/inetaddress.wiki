@@ -4,7 +4,7 @@
 
 = Description =
 
-Perform validation if given inetaddress is valid.
+Perform validation if given IP address is valid.
 
 = Parameters =
  * type - type of the validation. Here it's value is `inetaddress`.
