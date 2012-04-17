@@ -1,5 +1,4 @@
 #summary Validation using OGNL expression
-#labels Phase-Implementation
 
 <wiki:toc max_depth="1" />
 
@@ -14,7 +13,7 @@ Perform validation check using OGNL expression.
 
  * expression - The regular expression.
 
- * regex - Indicate whether to use regular or OGNL expression. It is optional. It can be either `true` or `false`. `true` for regular expression otherwise expression would be treated as OGNL.
+ * regex - Indicate whether to use regular or OGNL expression. It is optional. It can be either `true` or `false`. `true` for regular expression otherwise expression will be treated as OGNL.
 
 To use `expression` and `regex` parameters, you will have to add `<param>` element in the `<rule>` element.
 
