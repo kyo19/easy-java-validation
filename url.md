@@ -1,0 +1,23 @@
+
+
+# Description #
+
+URL validator checks that a given field is a String and a valid URL.
+
+# Parameters #
+  * type - type of the validation. Here it's value is `url`.
+
+  * fieldName - Name of the field that need to check for validation.
+
+
+# Examples #
+```
+ <validations>
+        <!-- url validation for 'userFormValidation' -->
+	<validation name="userFormValidation">
+		<rule type="url" fieldName="url">
+			<message>URL is not in proper format</message>
+		</rule>
+	</validation>
+ </validations>
+```

@@ -1,0 +1,29 @@
+
+
+# Description #
+
+Perform validation check using custom regular expression.
+
+# Parameters #
+  * type - type of the validation. Here it's value is `expression`.
+
+  * fieldName - Name of the field that need to check for validation.
+
+  * expression - The regular expression.
+
+  * regex - Indicate whether to use regular or OGNL expression. It is optional. It can be either `true` or `false`. But must be `true` for regular expression otherwise expression will be treated as OGNL.
+
+To use `expression` and `regex` parameters, you will have to add `<param>` element in the `<rule>` element.
+
+# Examples #
+```
+ <validations>
+        <!-- Regular expression validation for 'userFormValidation' -->
+	<validation name="userFormValidation">
+		<rule type="expression" fieldName="zipcode">
+                        <param expression="^\d{5}([\-]\d{4})?$" regex="true"/>
+			<message>Invalid zipcode</message>
+		</rule>
+	</validation>
+ </validations>
+```

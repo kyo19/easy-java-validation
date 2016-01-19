@@ -1,0 +1,23 @@
+
+
+# Description #
+
+Required validator checks if the specified field is not null.
+
+
+# Parameters #
+  * type - type of the validation. Here it's value is `required`.
+
+  * fieldName - Name of the field that need to check for validation.
+
+# Examples #
+```
+ <validations>
+        <!-- Required field validation for 'userFormValidation' -->
+	<validation name="userFormValidation">
+		<rule type="required" fieldName="firstName">
+			<message>FirstName is required</message>
+		</rule>
+	</validation>
+ </validations>
+```

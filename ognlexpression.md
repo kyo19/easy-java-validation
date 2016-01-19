@@ -1,0 +1,31 @@
+
+
+# Description #
+
+Perform validation check using OGNL expression.
+
+# Parameters #
+  * type - type of the validation. Here it's value is `expression`.
+
+  * fieldName - Name of the field that need to check for validation. It is optional for validation using OGNL expression.
+
+  * expression - The regular expression.
+
+  * regex - Indicate whether to use regular or OGNL expression. It is optional. It can be either `true` or `false`. `true` for regular expression otherwise expression will be treated as OGNL.
+
+To use `expression` and `regex` parameters, you will have to add `<param>` element in the `<rule>` element.
+
+# Examples #
+```
+ <validations>
+        <!-- Validation for 'userFormValidation' using OGNL expression -->
+	<validation name="userFormValidation">
+		<rule type="expression">
+                        <param expression="#age > 21" />
+			<message>Age should be greater than 21</message>
+		</rule>
+	</validation>
+ </validations>
+```
+
+The variables, you are using in OGNL expression should be added in parameter map with their values. e.g:- here `age`.

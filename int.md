@@ -1,0 +1,30 @@
+
+
+# Description #
+
+Validation to checks if the integer specified is within a certain range.
+
+
+# Parameters #
+  * type - type of the validation. Here it's value is `int`.
+
+  * fieldName - Name of the field that need to check for validation.
+
+  * min - The minimum value. (Optional).
+
+  * max - The maximum value. (Optional).
+
+To use `min` and `max` parameters, you will have to add `<param>` element in the `<rule>` element.
+
+# Examples #
+```
+ <validations>
+        <!-- Integer comparison validation for 'userFormValidation' -->
+	<validation name="userFormValidation">
+		<rule type="int" fieldName="age">
+                        <param min="20" max="40"/>
+			<message>Age should be between 20 and 40</message>
+		</rule>
+	</validation>
+ </validations>
+```
